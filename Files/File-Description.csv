@@ -1,0 +1,5 @@
+"File","Description"
+"logistics-copilot-solution.zip","Full solution export including agents, topics, flows"
+"SampleData/telematics.json","Mock telematics feed for route optimisation testing"
+"SampleData/orders.csv","Sample shipment orders for planning"
+"scripts/deploy-logistics-connectors.ps1","Script to configure connectors and agent permissions"

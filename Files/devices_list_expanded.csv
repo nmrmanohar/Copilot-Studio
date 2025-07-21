@@ -1,0 +1,24 @@
+Image URL,Name,Maker,Category,Processor,RAM,SSD,OS,GPU,Warranty
+https://contoso.com/images/dell_optiplex_7080.jpg,OptiPlex 7080,Dell,Desktop,Intel Core i7-10700,16GB,512GB,Windows 10 Pro,Intel UHD Graphics 630,3 years
+https://contoso.com/images/hp_elitedesk_800_g6.jpg,EliteDesk 800 G6,HP,Desktop,Intel Core i5-10500,8GB,256GB,Windows 10 Pro,Intel UHD Graphics 630,3 years
+https://contoso.com/images/lenovo_thinkpad_x1_carbon.jpg,ThinkPad X1 Carbon,Lenovo,Laptop,Intel Core i7-1165G7,16GB,1TB,Windows 11 Pro,Intel Iris Xe Graphics,2 years
+https://contoso.com/images/macbook_pro_14.jpg,"MacBook Pro 14""",Apple,Laptop,Apple M1 Pro,16GB,512GB,macOS Monterey,Integrated 14-core,1 year
+,Custom Build,Custom,Custom,User-defined,User-defined,User-defined,User choice,User choice,User choice
+https://contoso.com/images/dell_optiplex_5090.jpg,OptiPlex 5090,Dell,Desktop,Intel Core i5-10500,8GB,256GB,Windows 10 Pro,Intel UHD 630,3 years
+https://contoso.com/images/hp_elitedesk_705_g5.jpg,EliteDesk 705 G5,HP,Desktop,AMD Ryzen 5 PRO 3400G,16GB,512GB,Windows 10 Pro,Radeon Vega 11,3 years
+https://contoso.com/images/lenovo_thinkcentre_m720.jpg,ThinkCentre M720,Lenovo,Desktop,Intel Core i7-9700,16GB,512GB,Windows 10 Pro,Intel UHD 630,3 years
+https://contoso.com/images/apple_imac_24.jpg,"iMac 24""",Apple,Desktop,Apple M1,8GB,256GB,macOS Big Sur,Integrated 7-core,1 year
+https://contoso.com/images/dell_precision_3450.jpg,Precision 3450,Dell,Desktop,Intel Core i9-10900K,32GB,1TB,Windows 10 Pro,NVIDIA Quadro P1000,3 years
+https://contoso.com/images/hp_z2_mini_g5.jpg,Z2 Mini G5,HP,Desktop,Intel Xeon E-2276M,32GB,512GB,Windows 10 Pro,NVIDIA Quadro T1000,3 years
+https://contoso.com/images/lenovo_ideacentre_510a.jpg,IdeaCentre 510A,Lenovo,Desktop,Intel Core i3-10100,8GB,256GB,Windows 10 Home,Integrated UHD 630,1 year
+https://contoso.com/images/dell_latitude_7420.jpg,Latitude 7420,Dell,Laptop,Intel Core i7-1185G7,16GB,512GB,Windows 11 Pro,Intel Iris Xe,3 years
+https://contoso.com/images/hp_elitebook_x360_1030_g7.jpg,EliteBook x360 1030 G7,HP,Laptop,Intel Core i7-10610U,16GB,512GB,Windows 10 Pro,Intel UHD 620,3 years
+https://contoso.com/images/lenovo_thinkpad_t14.jpg,ThinkPad T14,Lenovo,Laptop,AMD Ryzen 7 PRO 4750U,16GB,1TB,Windows 10 Pro,Integrated,2 years
+https://contoso.com/images/surface_laptop_4.jpg,Surface Laptop 4,Microsoft,Laptop,AMD Ryzen 5,8GB,256GB,Windows 10 Home,Radeon Vega,1 year
+https://contoso.com/images/surface_pro_7.jpg,Surface Pro 7,Microsoft,Laptop,Intel Core i5-1035G4,8GB,256GB,Windows 10 Pro,Intel Iris Plus,1 year
+https://contoso.com/images/dell_xps_13.jpg,XPS 13,Dell,Laptop,Intel Core i7-1165G7,16GB,512GB,Windows 11 Pro,Intel Iris Xe,1 year
+https://contoso.com/images/hp_spectre_x360_13.jpg,Spectre x360 13,HP,Laptop,Intel Core i7-1165G7,16GB,512GB,Windows 11 Home,Intel Iris Xe,2 years
+https://contoso.com/images/lenovo_yoga_c940.jpg,Yoga C940,Lenovo,Laptop,Intel Core i7-9750H,16GB,1TB,Windows 10 Pro,NVIDIA GTX 1650,2 years
+https://contoso.com/images/macbook_air_m2.jpg,MacBook Air M2,Apple,Laptop,Apple M2,8GB,256GB,macOS Monterey,Integrated 8-core,1 year
+,Custom Gaming PC,Custom,Custom,User-defined,User-defined,User-defined,User choice,User choice,User choice
+,Custom Ultrabook,Custom,Custom,User-defined,User-defined,User-defined,User choice,User choice,User choice

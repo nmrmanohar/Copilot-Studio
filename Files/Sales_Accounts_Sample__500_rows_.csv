@@ -1,0 +1,11 @@
+AccountID,AccountName,Industry,PrimaryContactID,Region,CreatedOn,ModifiedOn
+ed315bf7-cc40-450f-8d92-b8f27a4b1246,Davis Group,Technology,233db725-e3aa-4da2-9ba0-d66b6c4b7e2b,LATAM,2023-08-23 10:35:16,2025-02-13 05:51:41
+d35e7400-a1e5-4632-8df9-89ee55f02a32,Owens-Sloan,Technology,9c2be2ff-4270-4b84-8598-86a0289175c0,APAC,2023-07-11 18:27:02,2025-02-19 07:42:26
+98debfea-a47f-4df7-b6d3-ef3e333aad31,Daniel-Nelson,Manufacturing,eb632e3d-5985-4e30-a413-10b328531a93,APAC,2024-01-29 04:30:42,2024-09-18 08:04:36
+279207e5-f405-4878-9706-7545d47c1757,Smith and Sons,Retail,f8914e49-c236-4fcc-b273-3a4e9dae6116,North America,2023-10-31 07:06:20,2025-01-01 10:25:14
+000e68b4-b0e7-4c5f-b154-a28b38d9a07e,Burnett Group,Finance,06a40d80-947b-462f-8cff-ae96b8a0f3a3,LATAM,2024-02-29 22:53:13,2025-03-29 00:17:09
+4b3228cf-f74b-41a3-9e5d-839426a3d244,"Sanchez, White and Garcia",Manufacturing,7f2111b9-d9dc-427a-8f34-04eef5a397ce,APAC,2024-05-13 02:44:37,2025-01-11 16:56:50
+55e06a58-82ae-47c7-810c-c7985a00d158,"Hicks, Howard and Wagner",Healthcare,38f03560-b619-4c70-98a8-22fc1e19a390,APAC,2023-07-18 20:48:32,2024-08-15 16:18:10
+04c8d063-f5d7-4fba-9884-6eab74bfd72d,Patton-Carter,Finance,ab804d0a-411d-4704-9cad-2f3c4abb30d8,APAC,2024-05-05 14:11:57,2025-04-18 14:56:37
+bab3069a-36d2-4cea-a288-8ef7d80bb2ec,Ayala-Joyce,Finance,b82e9201-5d41-45e4-9fa2-39f053aea15a,LATAM,2023-06-19 04:44:38,2024-11-12 16:03:44
+e2a13096-1f3c-40e1-818c-e2f86b5eabb5,"Romero, Lindsey and Webb",Finance,dfd64245-456d-4b94-9ab8-e198cacacf0f,EMEA,2024-06-01 16:20:17,2024-10-08 21:11:54

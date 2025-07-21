@@ -1,0 +1,6 @@
+TaskID,EmployeeID,TaskName,TaskDescription,DueDate,Status,AssignedTo
+d559ec4e-38cb-4435-b978-74380ae97c59,e3b5305b-87c6-494c-b0ce-6afdc2359169,Schedule orientation,Schedule orientation for Veronica Fitzpatrick,2025-06-15,In Progress,Sabrina Johnson
+38764d41-23c3-4d0e-9752-90a3b7cfefa6,30e2c534-7ae0-487c-9709-cd8229bae99b,Assign Teams license,Assign Teams license for Michael Martinez,2025-06-09,In Progress,Erica Carter
+e26ea13c-6904-4894-af9a-24395953fe55,29df3927-6dbe-4b76-828f-13845d0fc189,Create AD account,Create AD account for Kevin Holmes,2025-05-17,Completed,Steven Ingram
+a9a21c90-3e38-4349-98a9-2219a2f02ffb,10ddd8e9-71f4-44e8-b177-64442dfe6e89,Schedule orientation,Schedule orientation for James Cortez,2025-05-22,Not Started,Robert Dawson
+c34a31f6-1e2d-4527-9d96-4997052505c1,d05f57c8-4193-44bc-88eb-47e8628ee172,Assign Teams license,Assign Teams license for Alex Hernandez,2025-06-04,Not Started,Daniel Gallagher

@@ -1,0 +1,6 @@
+AssetID,AssetName,Category,AssignedToEmployeeID,RequestDate,Status,AssetModel
+a3bc954f-3aee-45e9-b510-f7497c58c482,Security Badge,Hardware,78f0d408-8019-4c3c-a352-4accca6b6056,2025-05-27 09:55:05,Requested,Couple-591
+3e7c0446-1733-4537-b292-79f58ee8d309,MacBook Pro,Software License,e636f969-b8b3-4361-be15-6ed050695b71,2025-05-12 13:55:53,Requested,Most-277
+050b5449-d192-4f9d-b858-b0569cc478db,MacBook Pro,Badge,af93160e-90f2-4046-8dd5-2a161d639106,2025-05-07 13:27:24,Requested,High-538
+6c06b5c3-ff5f-46c0-9776-e281691ed13b,Security Badge,Badge,6972205f-8e8c-4d2e-b4c1-d2453f63e891,2025-05-07 03:56:40,Ordered,Economy-125
+d2debef9-3986-49ab-9354-1d21a26d917c,MacBook Pro,Badge,8549faa6-7130-47c7-8c77-9c998377a927,2025-05-24 01:09:35,Requested,Fall-932

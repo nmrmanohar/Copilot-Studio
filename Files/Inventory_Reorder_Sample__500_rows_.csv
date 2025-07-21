@@ -1,0 +1,11 @@
+ItemID,ItemName,Unit,CurrentStock,ReorderThreshold,ReorderMultiple,SupplierName,SupplierEmail,LeadTimeDays,ModifiedDate,Category
+1,Rest Item 001,kg,133,49,20,Quinn LLC,omorgan@evans.com,14,2025-05-25 04:37:52,Packaging
+2,Moment Item 002,liters,189,93,20,"Cook, Chapman and Gonzales",michaelperez@brown.net,6,2025-04-23 14:03:12,Packaging
+3,To Item 003,liters,46,143,10,Mclaughlin-Ortiz,jenniferbrown@richardson.com,11,2025-05-30 06:40:47,Packaging
+4,Entire Item 004,liters,128,109,10,Howard Ltd,emorrow@roberts.biz,15,2025-05-17 20:39:18,Packaging
+5,Painting Item 005,kg,17,149,50,Guerrero-Watkins,scottgeorge@mccoy.com,16,2025-06-02 11:44:25,Raw Material
+6,Coach Item 006,pcs,65,48,100,Villarreal Inc,qbridges@luna-perez.com,23,2025-04-14 11:22:57,Packaging
+7,Record Item 007,kg,194,85,100,Garner-Caldwell,apace@rice-robinson.com,22,2025-04-27 18:22:27,Raw Material
+8,Read Item 008,liters,57,68,100,Snyder Inc,danielbenjamin@soto.net,25,2025-05-26 15:32:16,Packaging
+9,Big Item 009,kg,140,28,100,Garcia-Wall,stephanie71@coleman.net,2,2025-05-26 07:19:07,Raw Material
+10,Memory Item 010,kg,163,77,10,Schneider LLC,bellkristin@reid.com,27,2025-05-18 06:27:27,Packaging
