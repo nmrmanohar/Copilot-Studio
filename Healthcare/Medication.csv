@@ -1,0 +1,4 @@
+MedicationID,PatientID,MedicationName,Dosage,StartDate,EndDate
+M001,P001,Lisinopril,10mg,2025-01-01,2025-12-31
+M002,P002,Atorvastatin,20mg,2025-02-15,2025-11-15
+M003,P003,Metformin,500mg,2025-03-10,2025-12-10

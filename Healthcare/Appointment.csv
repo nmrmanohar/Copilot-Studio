@@ -1,0 +1,4 @@
+AppointmentID,PatientID,AppointmentDate,Doctor,Department,Notes
+A001,P001,2025-08-01 09:00,Dr. Smith,Cardiology,"Regular checkup"
+A002,P002,2025-08-02 14:30,Dr. Lee,Dermatology,"Follow-up"
+A003,P003,2025-08-03 11:00,Dr. Patel,Neurology,"Initial consultation"
