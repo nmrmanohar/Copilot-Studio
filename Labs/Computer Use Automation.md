@@ -10,8 +10,11 @@ Your agent will:
 **Note: These exact sample URLs and instructions come from the Computer use Learn article.** 
 
 **Part 0 — Prerequisites you must set (admin steps)**
+
 **0.1 Create (or use) a United States environment**
+
 Computer use is available only when the **environment region is United States**. 
+
 	1. Go to **Power Platform admin center**. 
       https://aka.ms/ppac
       <img width="1291" height="723" alt="image" src="https://github.com/user-attachments/assets/a3833047-9427-47be-9f2c-98496e3d47f3" />
