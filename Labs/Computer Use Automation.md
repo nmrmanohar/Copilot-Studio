@@ -26,6 +26,7 @@ Computer use is available only when the **environment region is United States**.
 
 	1. Go to **Power Platform admin center**. 
       https://aka.ms/ppac
+	  
       <img width="1291" height="723" alt="image" src="https://github.com/user-attachments/assets/a3833047-9427-47be-9f2c-98496e3d47f3" />
 
   2. Left nav: **Manage → Environments**.
