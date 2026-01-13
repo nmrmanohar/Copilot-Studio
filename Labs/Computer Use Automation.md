@@ -31,11 +31,18 @@ Computer use is available only when the **environment region is United States**.
   3. Select **New**.
   <img width="1910" height="960" alt="image" src="https://github.com/user-attachments/assets/31b81127-af6c-4e0b-89c9-23d44624f4cb" />
   4. Fill the new environment form exactly like this: 
+  
 		○ **Name:** CUA Demo/ any name you prefer
+		
 		○ **Region:** United States
+		
 		○ **Get new features early:** Yes
+		
 		○ **Type:** Sandbox/ Developer (based on your license)
+		
 		○ **Add a Dataverse data store:** Yes
+
+		
 5. Select **Next.**
   <img width="282" height="961" alt="image" src="https://github.com/user-attachments/assets/79766c3c-2729-40d1-b376-b7ac42c521d2" />
 
