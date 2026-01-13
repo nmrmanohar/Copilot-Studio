@@ -1,12 +1,21 @@
 **Demo: “Invoice Processor” agent (Computer use + hosted browser)**
+
 **What this demo does**
+
 Your agent will:
+
 	1. Open the **Contoso Invoice Manager** demo site
+	
 	2. Filter invoices to **Last 24 hours**
+	
 	3. Open an invoice PDF
+	
 	4. Open a second demo site (**invoice submission form**)
+	
 	5. Copy the data from the PDF into the form
+	
 	6. **Submit** the invoice form (no confirmation)
+	
 **Note: These exact sample URLs and instructions come from the Computer use Learn article.** 
 
 **Part 0 — Prerequisites you must set (admin steps)**
