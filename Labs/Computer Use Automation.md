@@ -1,4 +1,4 @@
-<img width="977" height="465" alt="image" src="https://github.com/user-attachments/assets/4b8d9135-9034-443d-a512-e96e80981a89" />**Demo: “Invoice Processor” agent (Computer use + hosted browser)**
+**Demo: “Invoice Processor” agent (Computer use + hosted browser)**
 **What this demo does**
 Your agent will:
 	1. Open the **Contoso Invoice Manager** demo site
@@ -179,5 +179,5 @@ What this demo proves (in plain terms)
 	• You can run it on Hosted browser (Windows 365 managed) without machine setup. 
 	• You can secure it with Access control allowlists and Human supervision. 
 	• You can monitor it with advanced logs in Dataverse and detailed run replays.
-<img width="924" height="3944" alt="image" src="https://github.com/user-attachments/assets/135bf1e1-afe5-413c-8032-342df7f1bdc1" />
+
 
