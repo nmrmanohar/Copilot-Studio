@@ -157,6 +157,7 @@ The Learn page explicitly recommends testing via the Test experience in the tool
 
 When the user asks to “process an invoice” or “submit the latest invoice”, run the tool “Invoice processing - hosted browser”.
 After the tool finishes, summarize the result in 2 sentences and include whether the invoice was submitted.
+<img width="1075" height="737" alt="image" src="https://github.com/user-attachments/assets/716a9654-8b76-4c8f-967d-0081398ae92e" />
 
 This aligns with “computer use works best for autonomous/background runs” but can be used in conversational experiences too. 
 **4.2 Test in the agent chat**
@@ -178,6 +179,6 @@ What this demo proves (in plain terms)
 	• You can add Computer use as a tool (Tools → Add tool → New tool → Computer use). 
 	• You can run it on Hosted browser (Windows 365 managed) without machine setup. 
 	• You can secure it with Access control allowlists and Human supervision. 
-	• You can monitor it with advanced logs in Dataverse and detailed run replays.
+	
 
 
