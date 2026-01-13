@@ -53,8 +53,11 @@ Computer use is available only when the **environment region is United States**.
   <img width="302" height="986" alt="image" src="https://github.com/user-attachments/assets/a700d389-df72-4575-8fd5-6c9b31d591dd" />
 
 **0.2 Ensure “Hosted browser in computer use” is enabled (tenant setting)**
+
 This demo uses **Hosted browser** (Windows 365 managed). 
-	1. In **Power Platform admin center**, left nav: Manage → Tenant settings.
+
+	1. In **Power Platform admin center**, left nav: **Manage → Tenant settings**.
+	
 	2. Select **Hosted browser in computer use.**
   <img width="1887" height="557" alt="image" src="https://github.com/user-attachments/assets/21506ac1-7dcf-4eaf-b72d-753899c4c614" />
 
