@@ -100,11 +100,16 @@ Now configure logging (same Features area):
   Once the agent is created, follow the next steps
 	4. Edit Name: **Contoso Invoice Processor**
   <img width="887" height="183" alt="image" src="https://github.com/user-attachments/assets/a6197dec-646c-4f2b-b846-5209d100ba8f" />
+	5. Select your agent's model to GPT-5 or higher
+	<img width="1156" height="383" alt="image" src="https://github.com/user-attachments/assets/53f9356c-d454-4186-b7e9-d7799a6d9ddc" />
 
 	****1.2 **Enable generative orchestrator** (required)****
-Computer use requires the agent to have generative orchestrator enabled. 
+	Computer use requires the agent to have generative orchestrator enabled. 
+	
 	1. In the **agent, select Settings**.
+	
 	2. Select Generative AI.
+	
 	3. Under Orchestration, set Use generative AI orchestration for your agent’s responses? = **Yes**. 
 <img width="1442" height="190" alt="image" src="https://github.com/user-attachments/assets/b1636ef8-9d90-47a3-a263-7f846ca883e5" />
 
