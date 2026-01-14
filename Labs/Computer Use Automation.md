@@ -43,10 +43,10 @@ Computer use is available only when the **environment region is United States**.
 		○ **Type:** Sandbox/ Developer (based on your license)
 		
 		○ **Add a Dataverse data store:** Yes
-
+<img width="282" height="961" alt="image" src="https://github.com/user-attachments/assets/79766c3c-2729-40d1-b376-b7ac42c521d2" />
 		
 6. Select **Next.**
-  <img width="282" height="961" alt="image" src="https://github.com/user-attachments/assets/79766c3c-2729-40d1-b376-b7ac42c521d2" />
+  
 
 	6. On the Dataverse page:
 		○ **Language:** English
