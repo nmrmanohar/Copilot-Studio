@@ -34,6 +34,8 @@ Computer use is available only when the **environment region is United States**.
   
 		○ **Name:** CUA Demo/ any name you prefer
 		
+		○ **Make this managed Environment:** Yes
+		
 		○ **Region:** United States
 		
 		○ **Get new features early:** Yes
@@ -43,7 +45,7 @@ Computer use is available only when the **environment region is United States**.
 		○ **Add a Dataverse data store:** Yes
 
 		
-5. Select **Next.**
+6. Select **Next.**
   <img width="282" height="961" alt="image" src="https://github.com/user-attachments/assets/79766c3c-2729-40d1-b376-b7ac42c521d2" />
 
 	6. On the Dataverse page:
