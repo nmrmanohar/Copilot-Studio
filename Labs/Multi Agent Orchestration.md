@@ -1,11 +1,17 @@
  **“Connect to an existing Copilot Studio agent.” **
+
 You will build 3 agents in the same environment:
+
 	• **Main agent: Contoso Orchestrator
+
 	• Connected agent 1: Approvals Specialist
+	
 	• Connected agent 2: IT Password Reset Specialist**
+
 The main agent will connect to the two specialist agents and then route to them from a topic (and also be able to pick them via generative orchestration).
 
 **Prerequisites** (must be true for this demo)
+
 	1. Both specialist agents must be Published before the main agent can connect to them.
 	
 	2. Both specialist agents must be configured to allow connections from other agents (toggle in Settings). 
