@@ -6,11 +6,13 @@ You will build 3 agents in the same environment:
 The main agent will connect to the two specialist agents and then route to them from a topic (and also be able to pick them via generative orchestration).
 
 **Prerequisites** (must be true for this demo)
-	1. Both specialist agents must be Published before the main agent can connect to them.   
+	1. Both specialist agents must be Published before the main agent can connect to them.
+	
 	2. Both specialist agents must be configured to allow connections from other agents (toggle in Settings). 
-	4. If you’re using a trial license, note: you can test agents but you can’t publish, which will block the “connect existing agent” requirement. 
+	
+	3. If you’re using a trial license, note: you can test agents but you can’t publish, which will block the “connect existing agent” requirement. 
 
-Knowledge sources to incorporate (add these exact URLs)
+**Knowledge sources to incorporate (add these exact URLs)**
 You will add one knowledge source to each specialist agent:
 	**• Approvals Specialist knowledge source:**
   https://learn.microsoft.com/en-us/microsoft-copilot-studio
@@ -22,10 +24,15 @@ Note: We will try to get answers related to Password Reset (https://learn.micros
   https://learn.microsoft.com/en-us/power-platform/
 	
 **Part A — Build and publish the specialist agents**
+
 **A1) Create agent: “Approvals Specialist”**
+
 	1. Open Microsoft Copilot Studio.
+	
 	2. Select **Agents → Create blank agent.**
+	
 	3. Once created, Set Name to: **Approvals Specialist**
+	
 	<img width="1057" height="352" alt="image" src="https://github.com/user-attachments/assets/d0616d28-9303-43ef-874c-fc6257d275eb" />
 
 Add knowledge source
