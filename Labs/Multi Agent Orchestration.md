@@ -317,4 +317,4 @@ What this demo proves (tie-back to the URL)
 	• You controlled orchestration quality by updating the connected agent’s local description (critical for correct invocation). 
 	
 	• You demonstrated governance of context by turning Pass conversation history ON for one agent and OFF for the other. 
-<img width="925" height="4723" alt="image" src="https://github.com/user-attachments/assets/2dec9277-db70-4a5e-a1c8-abde1895f1d5" />
+
