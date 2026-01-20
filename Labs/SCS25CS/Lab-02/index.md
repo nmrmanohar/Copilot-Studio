@@ -1,0 +1,500 @@
+# Lab 02 - Build an agent with Copilot Studio
+
+In this lab, you will go through the following tasks:
+
+- Add a website as a knowledge source
+- Use adaptive cards to make your agent look nicer
+- Add Dataverse as a knowledge source
+- Enrich your agent with AI Prompts
+
+## 🤖 Create your agent
+
+### Create a solution
+
+Best Practice for everything in the Power Platform: Work INSIDE solutions. They are great for organizing your customizations and some features only work here plus they over ALM capabilities (remember from last lab?).
+
+Because of that our first step within **[make.powerapps.com](https://make.powerapps.com)** is to navigate to **Solutions** on the left hand side and click on **New Solution**
+
+!["Create new solution"](./assets/lab03_conblank_01_createsolution.png)
+
+In the dialog which open give your solution a meaningful name and select either create an own publisher by clicking **New** or use the **Default Publisher** named after your environment.
+
+!["Create Solution Dialog"](./assets/lab02_01_solutionwizard.png)
+
+> [!NOTE]
+> Using the Default Publisher is not considered best practice because you have no control about the technical prefix all your components will receive.
+
+Congrats you have a solution for doing our Agent development! Every journey starts with the first step 💪
+
+### Create the agent inside the solution
+
+Now we are going to create our agent. Navigate to your newly created solution select **New** -> **Agent** -> **Agent**, this will redirect you to Copilot Studio where all the agent magic happens.
+
+!["Create agent"](./assets/lab02_01_createagent.png)
+
+### Copilot Studio
+
+Now we are in the Agent editing experience. First step give the agent a name. If you started in the solution to create the agent it will already be linked, if you started in Copilot Studio you connect the Agent with our solution, for this select the three dots and select **Update advanced settings**.
+
+!["Create Agent in Copilot Studio"](./assets/lab02_01_copilotstudio1.png)
+
+Select the solution you created before and press **Update**. Now your agent is attached to your solution.
+
+!["Connect with a solution"](./assets/lab02_01_copilotstudio2.png)
+
+After creating the agent, add **Instructions**. In our lab we are going to create an agent to help users picking new devices when ordering with internal IT.
+
+In the next step we will add Microsoft Learn as a Knowledge source to ground the agent in current information about Prompts and compatibilities. Especially we want to use it as a source to get information about what requirement Windows 11 devices have to connect that info in the next steps with our internal device datastores.
+
+## 🌐 Add a website as a knowledge source - Microsoft Learn
+
+We are going to start extending our agent by adding **Knowledge** to it. In Copilot Studio the most simple way of doing this is **Knowledge Sources**. To add one, click on **Knowledge** and **Add Knowledge**.
+
+!["Add Knowledge"](./assets/lab02_02_addknowledge.png)
+
+In the opening dialog you can select between all the available options provided by Microsoft. We are going to use **Public Website** to get **Real-Time** data.
+
+!["Add Public Website"](./assets/lab02_02_addknowledge2.png)
+
+To add Microsoft Learn as a knowledge source add the domain **<https://learn.microsoft.com/>** and **Add**.
+
+!["Add Microsoft Learn as knowledge source"](./assets/lab02_02_addknowledge3.png)
+
+In the next step give it a name and a useful description. Afterward click on **Add to Agent** to finalize adding the knowledge source. This might take a short while.
+
+Let's test it! Click on **Test** in the right hand top corner to open the chat windows to test your agent with the knowledge you added before.
+
+!["Test chat mode in agent"](./assets/lab02_02_testing.png)
+
+We want to give the agent the ability to know which requirements a Windows 11 device needs to fulfil, that knowledge is on learn.microsoft.com so let's test our agent with the following prompt:
+
+**Which hardware requirements does a device need to fulfill to be able to run Windows 11?**
+
+!["Test chat mode in agent"](./assets/lab02_02_testing2.png)
+
+In Test mode you can always see what the agent is referencing in the main window, in this case we see that it is using the information it got from learn.microsoft.com! Awesome, now our agent always has access to the most current information about requirements around Windows devices.
+
+## 🎨 Use adaptive cards to make your agent look nicer
+
+Now lets make sure the users of our agent can ask for content - and lets use a different option here. Instead of using knowledge, we will create a topic with an adaptive card. The adaptive card will be used to make sure not only text is shown, but also a bit of design is shown.
+
+In this part of the lab, we will add a topic called Devices. In this topic, we will get items from a SharePoint list and return them in an adaptive card. This will make your agent look way better. ✨
+
+Let's start by creating a topic:
+
+1. Select **Add a topic** and then **From blank**
+
+    ![Add a topic from blank](./assets/Lab2_3_1_01_AddTopicFromBlank.png)
+
+1. Change the topic name from _Untitled_ to **Devices**
+1. Paste the following text under **Describe what the topic does**
+
+    ```text
+    This topic helps you discover available devices in your organization's inventory by browsing through the complete catalog. You can easily filter devices by type—whether you're looking for desktops, tablets, or laptops—to quickly narrow down your search. Simply ask what devices are available or specify the type you need, and the chatbot will show you matching options with relevant details.
+    ```
+
+1. Select the **Save** button to save the topic
+
+    Next, we will create a connector tool to get the items from SharePoint.
+
+1. Below the trigger select the **+** icon to add a new node, select **Add a tool**, select **Connector**, search for **Get items**, and select the **Get items** tool from SharePoint
+1. Select **Not connected** and select **Create new connection**
+
+    ![Create new connection](./assets/Lab2_3_1_02_CreateNewConnection.png)
+
+1. Select **Create** to create the connection
+1. Pick your account from the sign in screen
+1. Select **Submit**
+
+    The connector tool will get added to the canvas now.
+
+    ![Get Items](./assets/Lab2_3_1_03_GetItems.png)
+
+1. Select **Site Address** under _Inputs_
+
+    ![Site Address Input](./assets/Lab2_3_1_04_GetItemsInputs.png)
+
+    This will open a sidebar with configuration options for the inputs.
+
+    ![Sidebar](./assets/Lab2_3_1_05_Sidebar.png)
+
+1. Select the **dropdown menu** under _Site Address_, select **Enter custom value** and paste the following address:
+
+    ```text
+    https://ppcc25workshop01.sharepoint.com/sites/IT/
+    ```
+
+    ![Site Address](./assets/Lab2_3_1_06_SiteAddress.png)
+
+If you want to import that device data to your own SharePoint site you can download it **[Devices CSV with SharePoint schema](https://github.com/microsoft/scs25-copilot-studio-extensibility/blob/main/docs/lab-02/resources/devices.csv)**
+
+1. Select the **dropdown menu** under _List name_ and select **Devices**
+
+    ![List name](./assets/Lab2_3_1_07_ListName.png)
+
+1. Close the sidebar by selecting the **X** on the top right
+
+    We have now configured the connector tool to get all devices in the SharePoint list, but we want to filter on type of devices. Lets get that working now!
+
+1. Select the **+** above the _Get items_ node
+1. Select **Add a question**
+1. Enter the following question in the text box
+
+    ```text
+    What type of device are you looking for?
+    ```
+
+    ![Question for type of device](./assets/Lab2_3_1_08_QuestionType.png)
+
+1. Select **New option** under _Options for user_
+1. Enter **Desktop** in the input box that appears
+1. Add two options for **Tablet** and **Laptop** too
+
+    ![Question for type of device - options complete](./assets/Lab2_3_1_09_QuestionTypeOptionsComplete.png)
+
+1. Select **Var1**
+
+    This will open a sidebar where you can change the name of the variable
+1. Change the name of the variable to **VarDeviceType**
+1. Close the sidebar by selecting the **X** icon
+1. Next, remove the conditions for **Desktop**, **Tablet** and **Laptop** by selecting **...** and **Delete**
+
+    The nodes below the trigger in your topic should look like this now:
+
+    ![Conditions removed](./assets/Lab2_3_1_10_ConditionsRemoved.png)
+
+    Next, we want to make sure the SharePoint connector tool should filter on the choice the user made in the question.
+
+1. Select the **+** icon above the _Get Items_ node, select **Variable management** and select **Set a variable value**
+
+    ![Set a variable value](./assets/Lab2_3_1_11_SetVariable.png)
+
+1. Select **Select a variable** under _Set Variable_ and select **Create a new variable**
+1. Select **Var1** and rename it to **VarFilter** and close to dialog.
+1. Select **...**, select **Formula** and enter the following formula in the _fx_ input:
+
+    ```text
+    Concatenate("Status eq 'Available' and AssetType eq '", Topic.VarDeviceType, "'")
+    ```
+
+1. Select **Insert**
+
+    ![Enter formula](./assets/Lab2_3_1_14_Formula.png)
+
+1. Close the sidebar by selecting the **X** icon
+1. Select **Site Address** again under _Inputs_
+1. Select **...** under _Filter Query_ and then select **VarFilter**
+
+    ![Select Filter](./assets/Lab2_3_1_15_SelectVariable.png)
+
+1. Exit out of the _Get Items_ sidebar
+1. Select **GetItems** under _Outputs_
+1. Change the variable name to **VarDevices**
+1. Select the **+** icon below the _Get Items_ node
+1. Select **Send a message**
+1. Select **+ Add**
+1. Select **Adaptive card**
+
+    ![Add an adaptive card](./assets/Lab2_3_1_16_AddAdaptiveCard.png)
+
+1. Change the _Adaptive card_ from _JSON_ to **Formula**
+
+    ![JSON to Formula](./assets/Lab2_3_1_17_AdaptiveCardJSONtoFormula.png)
+
+1. Copy the below Adaptive card and paste it in the **Input field** below _Formula_
+
+    ```json
+    {
+        type: "AdaptiveCard",
+        body: [
+                    {
+                        type: "TextBlock",
+                        text: "AVAILABLE DEVICES",
+                        wrap: true,
+                        size: "Small",
+                        isSubtle: true,
+                        weight: "Bolder",
+                        spacing: "Medium"
+                    },
+                    {
+                    type:"Container",
+                    items: 
+                        ForAll(Topic.VarDevices.value,
+                        {
+                        
+                        type: "ColumnSet",
+                        columns: [
+                            {
+                                type: "Column",
+                                width: "80px",
+                                minHeight: "80px",
+                                items: [
+                                    {
+                                        type: "Container",
+                                        backgroundImage: {
+                                            url: Image,
+                                            horizontalAlignment: "Center",
+                                            verticalAlignment: "Center"
+                                        },
+                                        minHeight: "80px",
+                                        horizontalAlignment: "Center",
+                                        verticalContentAlignment: "Center"
+                                    }
+                                ],
+                                verticalContentAlignment: "Center",
+                                horizontalAlignment: "Left"
+                            },
+                            {
+                                type: "Column",
+                                width: "auto",
+                                items: [
+                                    {
+                                        type: "TextBlock",
+                                        text: Model,
+                                        wrap: true,
+                                        weight: "Bolder",
+                                        size: "Medium"
+                                    },
+                                    {
+                                        type: "TextBlock",
+                                        text: Manufacturer.Value,
+                                        isSubtle: true,
+                                        wrap: true,
+                                        spacing: "Small",
+                                        maxLines: 1
+                                    },
+                                      {
+                                        type: "TextBlock",
+                                        text: "Color: " & Color.Value,
+                                        isSubtle: true,
+                                        wrap: true,
+                                        spacing: "Small",
+                                        maxLines: 1
+                                    }
+                                ],
+                                verticalContentAlignment: "Center"
+                            },
+                            {
+                                type: "Column",
+                                width: "20px",
+                                items: [
+                                    {
+                                        type: "Image",
+                                        url: "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/arrow-right.png",
+                                        horizontalAlignment: "Right",
+                                        width: "20px",
+                                        height: "20px",
+                                        selectAction: {
+                                            type:"Action.OpenUrl",
+                                            url:'{Link}'
+                                        }
+                                    }
+                                ],
+                                verticalContentAlignment: "Center"
+                            }
+                        ]
+                    }
+            )
+            }
+        ]
+    }
+    ```
+
+1. Select the **X** icon of the _Adaptive card properties_ sidebar
+1. Select **Save** to save the topic
+1. Select **Test** to test your agent
+1. Enter **Select a device** and send
+1. Select **Laptop**
+1. Select **Allow** in the _Connect to continue_ card
+
+    ![Allow connection](./assets/Lab2_3_1_18_AllowConnection.png)
+
+    This will send you the Adaptive card as a response.
+
+    ![Adaptive Card Output](./assets/Lab2_3_1_19_AdaptiveCardiPhone.png)
+
+    > [!IMPORTANT]
+    > It might also show you a summarization message (which is bug that will be fixed soon!)
+    > ![Message](./assets/Lab2_3_1_20_Message.png)
+
+## 📊 Add Dataverse as a knowledge source - Dataverse entity suppliers / data excel file
+
+Next we want our agent to have access to our device support database to check which devices are known for having a lot of defects to avoid those. For that we will of course use a proper database - Dataverse. There is a prepared **Device Management** solution which we will import to have a structure for the demo data.
+
+Download  **[Device Management Solution](https://github.com/microsoft/scs25-copilot-studio-extensibility/blob/main/docs/lab-02/resources/LabDeviceSupport_1_0_0_1_managed.zip)** and open  **[make.powerapps.com](https://make.powerapps.com)**. You will be redirected to your Developer Environment. There click on solutions and on **Import**.
+
+![Import Solution](./assets/lab02_04_dataverse1.png)
+
+And select the downloaded soltion and click on **Import** in the Import Wizard.
+
+![Import Solution Wizard](./assets/lab02_04_dataverse2.png)
+
+This will take a short while, but after a few seconds to minutes you will see the success message. After the sucessful import click on **Apps**. The solution contains one Model Driven App we will use to import the demo data.
+
+![Open Dataverse Apps](./assets/lab02_04_dataverse3.png)
+
+Click on **Play** for the **Device Management** app.
+
+![Open Device Management App](./assets/lab02_04_dataverse4.png)
+
+The **Device Management** app automatically opens the view for the table **Device Defects**. Into this table we will import demo data for defects of devices to make this available to our agent as a second step. Click on the three dots and then on **Import from Excel** and in the submenu on **Import CSV**
+
+![Import CSV Wizard - File](./assets/lab02_04_dataverse5.png)
+
+For this download the following demo CSV **[Device Defect Demo CSV](https://github.com/microsoft/scs25-copilot-studio-extensibility/blob/main/docs/lab-02/resources/device_defects.csv)** and select it in the **Import from CSV** dialog.
+
+![Import CSV - File Delimiter](./assets/lab02_04_dataverse6.png)
+
+Click **Next** and make sure that you select **Semicolon** as Field Delimiter, after click on **Review Mapping**.
+
+![Import CSV - Field Mapping](./assets/lab02_04_dataverse7.png)
+
+The import wizard makes suggestions for field mappings of the CSV columns to Dataverse fields. Check those, most should be okay, you will probably just have to select **Faulty Device** as a boolean field and match the values **false** and **true** from the CSV. **Confirm the mapping of the option values with Okay!**
+
+![Import CSV - Start Import](./assets/lab02_04_dataverse8.png)
+
+After checking the mappings click on **Import** and **Confirm** the import in the next  dialog. The import might take a short while. Click on **Track Progress** to see a status of the import.
+
+If successful you will see records in the **Device Defect** table after a short while:
+
+![Imported Records](./assets/lab02_04_dataverse9.png)
+
+Now we want to make this data accessible to out agent. For this navigate back to **Copilot Studio**. In Copilot Studio the most simple way of doing this is **Knowledge Sources**. To add one, click on **Knowledge** and **Add Knowledge**.
+
+!["Add Knowledge"](./assets/lab02_02_addknowledge.png)
+
+In the Add Knowledge Wizard select **Dataverse**
+
+!["Add Knowledge - Dataverse"](./assets/lab02_04_knowledge_dataverse1.png)
+
+In the next screen you can select up to 15 tables from Dataverse. In our case we only want **Device Defects** select this table and click on **Add to Agent**.
+
+!["Add Knowledge - Table Selection"](./assets/lab02_04_knowledge_dataverse2.png)
+
+Awesome! Our Agent can now access the Device Defects in Dataverse. Time to test it, so click on **Test** and try to get your agent to evaluate available devices against their defects. You will see that it starts to use Dataverse as a Knowledge Source. You can use this prompt: **Across all device types which should be avoided because it has the most Device Defects?**
+
+!["Add Knowledge - Table Selection"](./assets/lab02_04_knowledge_dataverse3.png)
+
+Try out other prompts to also combine the other already added sources of the agent!
+
+## ✨ Enrich your agent with AI Prompts
+
+There is a lot of content available in our agent now, but we haven't shown one of the hidden gems of Copilot Studio yet: AI Prompts!
+
+Tools can be used to extend the capabilities of agents. You can add multiple types of tools to your agents in Microsoft Copilot Studio:
+
+- **Prebuilt connector action**, which use Power Platform connectors to access data from other systems, such as popular enterprise products like Salesforce, Zendesk, MailChimp, and GitHub.
+- **Custom connector action**, where a connector can be built to access data from public or private APIs.
+- **Power Automate cloud flow**, which use Power Automate cloud flows to perform actions, retrieve and work with data.
+- **AI Builder prompts**, which use AI Builder and natural language understanding to target the specific scenarios and workflows within your business.
+- **Bot Framework skill**, which use the skill manifest that outlines the actions the skill can perform, including its input and output parameters, the skill's endpoints, and dispatch models for the skill.
+
+### Add an AI prompt to a topic
+
+In this part of the lab we’ll be creating a **AI prompt** in a topic.
+
+Prompt tools in topics help guide the agent's response in a semi-scripted conversation by using the generative AI models from AI Builder and natural language understanding to address specific scenarios for your agents.
+
+For this lab, we'll add a Topic that calls a prompt action to generate questions for a quiz.
+
+1. In your agent select the **Topics** tab, select **+ Add a topic** and select **From blank**.
+
+    ![Add topic from blank](./assets/Lab2_4_1_01_AddTopicFromBlank.png)
+
+1. Enter a **name** for the Topic such as `Generate questions for a quiz` and enter the text below under **Describe what the topic does**
+
+    ```text
+    This topic covers creating interactive quizzes based on a chosen subject. It generates a set number of questions and formats them according to given instructions. The goal is to produce well-structured, engaging quizzes that match the topic and layout preferences.
+    ```  
+
+    ![Add topic description](./assets/Lab2_4_1_02_TopicDescription.png)
+
+1. Select **Save** on the top right of the authoring canvas to save the Topic.
+
+    ![Save topic](./assets/Lab2_4_1_03_SaveTopic.png)
+
+1. Under the trigger node, select the **+** icon and select the **Add a tool** node, followed by selecting **New prompt**.
+
+    ![Call an action node](./assets/Lab2_4_1_04_AddATool.png)
+
+1. Let's take a moment to familiarize ourselves with the Prompt dialog. You’ll see the following:
+    - **Name** of the prompt on the top left
+    - **Instructions** on the top left hand side which is where you can enter your prompt. You can also start by using the suggested prompts, and test the prompt.
+    - **...** on the right side of _Instructions_. Here you can find Clear prompts (to clear your prompt), Prompt library (a set of prompts you can use as templates) and _Settings_ (which can give you a lot more options for your prompt).
+    - **Get started with Copilot (Preview)** on the bottom of the _Instructions_. This is where you can get help creating your prompt. Making a good prompt is an art, and using Copilot for help is not a shame. Try it out later!
+    - **Start from a prompt template** on the bottom of _Get started with Copilot (Preview)_. This is where you can find a bunch of templates so that you don't have to reinvent the wheel.
+    - **Model** on the right side of the _..._. Here you can select one of the managed models or add a model from Azure AI Foundry.
+    - **Model response** on the top right hand side which displays the response generated based on the prompt.
+    - **Output** where you define the response to be returned as text, JSON or Document (Preview).
+
+    ![Prompt dialog](./assets/Lab2_4_1_06_PromptDialog.png)
+
+1. We'll create prompt that will generate questions for a quiz. Enter a name for the prompt such as `Quiz Generator`
+
+    ![Prompt name](./assets/Lab2_4_1_07_PromptName.png)
+
+1. Instead of creating a custom prompt from scratch, we will start from a prompt template. Select **prompt template** at the bottom.
+
+    ![Select prompt template](./assets/Lab2_4_1_08_SelectPromptTemplate.png)
+
+1. Enter **quiz** in the search box and select the **Generate a quiz** prompt.
+
+    ![Paste Prompt](./assets/Lab2_4_1_09_PromptLibraryQuiz.png)
+
+    > [!NOTE]
+    > Notice that the prompt automatically gets added to the instructions. It even includes inputs.
+
+    ![Selected prompt template](./assets/Lab2_4_1_10_PromptInstructions.png)
+
+1. Select the **topic** input and change the value of the sample data from _Art_ to **Power Platform**
+
+    ![Change value topic input](./assets/Lab2_4_1_11_ReplaceArtIT.png)
+
+1. Close the **topic** input and select **Test** and a response to the prompt regarding the values provided in the sample data of the input is returned.
+
+    ![Test Prompt response](./assets/Lab2_4_1_12_Test.png)
+
+    Let's now save the prompt by selecting **Save custom prompt**
+
+    ![Save custom prompt](./assets/Lab2_4_1_13_Save.png)
+
+    The prompt action node will now appear in the authoring canvas of the Topic. The same three inputs we saw in the instructions in the Prompt Builder are available here: topic, format and number.
+
+    ![Input variable value](./assets/Lab2_4_1_14_InputParameters.png)
+
+1. Select **...** under _topic_, select **System**, search for **Activity.Text** and select it
+1. Repeat the same for _format_ and _number_
+
+    If you're done, the inputs should look like this:
+
+    ![Inputs filled](./assets/Lab2_4_1_15_Inputs.png)
+
+1. Under _Outputs_, select **Select a variable**
+1. Select **Create a variable**
+1. Select **Var1**
+1. Rename the _Var1_ to **VarPrompt**
+1. Select **X** to close the _Variable Properties_ sidebar
+1. Select the **+** icon to add another node
+1. Select **Send a message**
+1. Select **{x}** to add a variable
+1. Select **VarPrompt.Text**
+
+    ![Select variable](./assets/Lab2_4_1_16_VarPromptText.png)
+
+    Your message should look like this:
+
+    ![Select variable](./assets/Lab2_4_1_17_VarPromptText.png)
+
+1. Select **Save** to save the topic
+1. Select **Test** to open the _Test your agent_ sidebar
+1. Enter the following message and send it:
+
+    ```text
+    Create a quiz about Microsoft with 5 questions that are true or false
+    ```
+
+    This should give you a response like this:
+
+    ![Test the agent](./assets/Lab2_4_1_18_Test.png)
+
+This is the end.... of lab 2!
